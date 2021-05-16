@@ -1,0 +1,14 @@
+.card_img {
+    width: 10rem;
+    height: 9rem;
+}
+
+.card_text {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

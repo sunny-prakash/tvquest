@@ -1,0 +1,8 @@
+.logo {
+    width: 3.2rem;
+    height: auto;
+}
+
+.active {
+    background-color: aquamarine;
+}
