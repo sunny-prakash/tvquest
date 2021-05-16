@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tvquest/static/css/main.c01760d1.chunk.css",
+    "main.js": "/tvquest/static/js/main.27f51fc6.chunk.js",
+    "main.js.map": "/tvquest/static/js/main.27f51fc6.chunk.js.map",
+    "runtime-main.js": "/tvquest/static/js/runtime-main.e4532fe5.js",
+    "runtime-main.js.map": "/tvquest/static/js/runtime-main.e4532fe5.js.map",
+    "static/css/2.c1f4f5f4.chunk.css": "/tvquest/static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.0c0168cf.chunk.js": "/tvquest/static/js/2.0c0168cf.chunk.js",
+    "static/js/2.0c0168cf.chunk.js.map": "/tvquest/static/js/2.0c0168cf.chunk.js.map",
+    "static/js/3.bf452b41.chunk.js": "/tvquest/static/js/3.bf452b41.chunk.js",
+    "static/js/3.bf452b41.chunk.js.map": "/tvquest/static/js/3.bf452b41.chunk.js.map",
+    "index.html": "/tvquest/index.html",
+    "static/css/2.c1f4f5f4.chunk.css.map": "/tvquest/static/css/2.c1f4f5f4.chunk.css.map",
+    "static/css/main.c01760d1.chunk.css.map": "/tvquest/static/css/main.c01760d1.chunk.css.map",
+    "static/js/2.0c0168cf.chunk.js.LICENSE.txt": "/tvquest/static/js/2.0c0168cf.chunk.js.LICENSE.txt",
+    "static/media/logo.59240aaf.png": "/tvquest/static/media/logo.59240aaf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4532fe5.js",
+    "static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.0c0168cf.chunk.js",
+    "static/css/main.c01760d1.chunk.css",
+    "static/js/main.27f51fc6.chunk.js"
+  ]
+}
