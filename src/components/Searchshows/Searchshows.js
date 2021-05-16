@@ -5,7 +5,9 @@ import Searcheditems from "../Searcheditems/Searcheditems";
 const Searchshows = () => {
     const [radioInput, setradioInput] = useState("");
     const [searchInput, setSearchInput] = useState("");
-    const [searchedData, setSearchedData] = useState([]);
+    const [searchedData, setSearchedData] = useState();
+    const [showNotFound, setShowNotFound] = useState(false);
+    const [showContent, setShowContent] = useState(false);
 
     const onChangeInput = (e) => {
         setSearchInput(e.target.value);
@@ -20,7 +22,17 @@ const Searchshows = () => {
         await fetch(`http://api.tvmaze.com/search/${radioInput}?q=${searchInput}`)
             .then((res) => res.json())
             .then((data) => {
-                setSearchedData(data);
+                console.log(data);
+                console.log(!Boolean(data.status));
+                if (!Boolean(data.status)) {
+                    setSearchedData(data);
+                    setShowNotFound(false);
+                    setShowContent(true);
+                } else {
+                    setSearchedData([]);
+                    setShowNotFound(true);
+                    setShowContent(false);
+                }
             });
     };
     const radioInputSelect = (e) => {
@@ -78,7 +90,7 @@ const Searchshows = () => {
                     >
                         {"Search"}
                     </button>
-                    {searchedData.length ? (
+                    {!showNotFound && showContent ? (
                         <button
                             onClick={() => {
                                 clearInput();
@@ -92,7 +104,8 @@ const Searchshows = () => {
                     )}
                 </div>
             </div>
-            {searchedData.length ? <Searcheditems data={searchedData} type={radioInput} /> : ""}
+            {showNotFound && !showContent ? <h1>{"Seacrhed Item Not Found"}</h1> : ""}
+            {!showNotFound && showContent ? <Searcheditems data={searchedData} type={radioInput} /> : ""}
         </div>
     );
 };

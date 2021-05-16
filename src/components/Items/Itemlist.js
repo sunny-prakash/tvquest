@@ -7,11 +7,11 @@ const Itemlist = (props) => {
 
     return (
         <div className="container">
-            <h1 className="fw7">{"Shows you might like :"}</h1>
-            <div className="row row-cols-2 row-cols-md-5 g-4 my-5">
+            <h1 className="fw7 white">{"Shows you might like :"}</h1>
+            <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 my-5">
                 {data.length
                     ? data.map((item) => {
-                          if (item.id <= 31) {
+                          if (item.id <= 51) {
                               return <Item key={item.id} item={item} />;
                           }
                       })

@@ -7,11 +7,11 @@ const Searcheditems = (props) => {
     let type = props.type;
     return (
         <div className="container">
-            <h1 className="fw7">{"Search result :"}</h1>
-            <div className="row row-cols-2 row-cols-md-5 g-4 my-5">
+            <h1 className="fw7 white">{"Search result :"}</h1>
+            <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 my-5">
                 {data.length
                     ? data.map((item) => {
-                          return <Searcheditem key={item.id} item={item} type={type} />;
+                          return <Searcheditem key={type === "shows" ? item.show.id : item.person.id} item={item} type={type} />;
                       })
                     : ""}
             </div>

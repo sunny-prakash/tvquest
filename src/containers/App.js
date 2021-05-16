@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar/Navbar";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Searchshows from "../components/Searchshows/Searchshows";
 import Itemlist from "../components/Items/Itemlist";
-import Error from "../components/Error/Error";
+import Errorpage from "../components/Errorpage/Errorpage";
+import Showdetails from "../components/Detailepage/Showdetails";
+import Actordetails from "../components/Detailepage/Actordetails";
 import tachyons from "tachyons";
 
 class App extends Component {
@@ -34,8 +36,11 @@ class App extends Component {
                     <Switch>
                         <Route path="/search" exact render={(props) => <Searchshows {...props} />} />
                         <Route path="/home" exact render={(props) => <Itemlist {...props} data={data} />} />
+                        <Route path="/shows/:id" exact component={Showdetails} />
+                        <Route path="/shows/actor/:id" exact component={Actordetails} />
+                        <Route path="/actor/:id" exact component={Actordetails} />
                         <Redirect from="/" exact to="/home" />
-                        <Redirect to="/error" exact component={Error} />
+                        <Route to="/error" component={Errorpage} />
                     </Switch>
                 </div>
             </div>
