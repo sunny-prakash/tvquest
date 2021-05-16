@@ -40,6 +40,7 @@ class App extends Component {
                         <Route path="/shows/actor/:id" exact component={Actordetails} />
                         <Route path="/actor/:id" exact component={Actordetails} />
                         <Redirect from="/" exact to="/home" />
+                        <Redirect from="/tvquest" exact to="/home" />
                         <Route to="/error" component={Errorpage} />
                     </Switch>
                 </div>
