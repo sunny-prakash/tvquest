@@ -8,6 +8,7 @@ const Searchshows = () => {
     const [searchedData, setSearchedData] = useState();
     const [showNotFound, setShowNotFound] = useState(false);
     const [showContent, setShowContent] = useState(false);
+    const [noInputError, setNoInputError] = useState(false);
 
     const onChangeInput = (e) => {
         setSearchInput(e.target.value);
@@ -16,15 +17,18 @@ const Searchshows = () => {
         window.location.reload();
     };
     const getInputForSearch = () => {
+        if (radioInput === "" || searchInput === "") {
+            setNoInputError(true);
+            return;
+        }
+        setNoInputError(false);
         fetchData();
     };
     const fetchData = async () => {
         await fetch(`https://api.tvmaze.com/search/${radioInput}?q=${searchInput}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
-                console.log(!Boolean(data.status));
-                if (!Boolean(data.status)) {
+                if (data.length) {
                     setSearchedData(data);
                     setShowNotFound(false);
                     setShowContent(true);
@@ -80,14 +84,14 @@ const Searchshows = () => {
                         onChange={(e) => {
                             onChangeInput(e);
                         }}
-                        className="mx-2"
+                        className="m-2"
                         type="text"
                     />
                     <button
                         onClick={() => {
                             getInputForSearch();
                         }}
-                        className="btn btn-info fw6 mx-2"
+                        className="btn btn-info fw6 m-2"
                     >
                         {"Search"}
                     </button>
@@ -96,7 +100,7 @@ const Searchshows = () => {
                             onClick={() => {
                                 clearInput();
                             }}
-                            className="btn btn-info fw6 mx-2"
+                            className="btn btn-info fw6 m-2"
                         >
                             {"Clear"}
                         </button>
@@ -105,7 +109,8 @@ const Searchshows = () => {
                     )}
                 </div>
             </div>
-            {showNotFound && !showContent ? <h1>{"Seacrhed Item Not Found"}</h1> : ""}
+            {noInputError ? <h1 className="white fw7">{"Search is empty"}</h1> : ""}
+            {showNotFound && !showContent ? <h1 className="white fw7">{"Seacrhed Item Not Found"}</h1> : ""}
             {!showNotFound && showContent ? <Searcheditemslist data={searchedData} type={radioInput} /> : ""}
         </div>
     );

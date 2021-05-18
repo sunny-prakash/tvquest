@@ -9,7 +9,7 @@ const Item = (props) => {
                 <img src={Boolean(show.image) ? show.image.medium : "https://cdn.pixabay.com/photo/2016/09/16/00/17/movie-1673024_960_720.jpg"} className="card_img" alt="card_img" />
                 <div className="card-body">
                     <h5 className="card-title">{show.name}</h5>
-                    <p className="card-text card_text">{show.summary.replaceAll(/(<([^>]+)>)/gi, "")} </p>
+                    <p className="card-text card_text">{Boolean(show.summary) ? show.summary.replaceAll(/(<([^>]+)>)/gi, "") : "NA"} </p>
                     <Link to={`shows/${show.id}`} className="btn btn-primary">
                         {"Show detail"}
                     </Link>

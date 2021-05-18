@@ -23,7 +23,7 @@ class Showdetails extends Component {
     render() {
         const { showDetail } = this.state;
         return (
-            <div className="mv3  helvetica">
+            <div key={this.id} className="mv3  helvetica">
                 {Boolean(showDetail.name) ? (
                     <div>
                         <div className="d-flex justify-content-center white">

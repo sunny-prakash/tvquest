@@ -18,11 +18,12 @@ class App extends Component {
     }
 
     componentWillMount() {
+        let page = Math.floor(Math.random() * 200);
         const fetchData = async () => {
-            await fetch("https://api.tvmaze.com/shows")
+            await fetch(`https://api.tvmaze.com/shows?page=${page}`)
                 .then((response) => response.json())
                 .then((data) => {
-                    this.setState({ data });
+                    this.setState({ data: data });
                 });
         };
         fetchData();
