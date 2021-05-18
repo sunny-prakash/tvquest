@@ -43,7 +43,7 @@ class Actordetails extends Component {
                                 <h1 className="fw7">{actorDetail.name}</h1>
                                 <h4 className="fw6">{`Country : ${actorDetail.country.name}`}</h4>
                                 <p>{`Birthday : ${Boolean(actorDetail.birthday) ? actorDetail.birthday : "NA"}`}</p>
-                                <p>{`Birthday : ${Boolean(actorDetail.gender) ? actorDetail.gender : "NA"}`}</p>
+                                <p>{`Gender : ${Boolean(actorDetail.gender) ? actorDetail.gender : "NA"}`}</p>
                             </div>
                         </div>
                     </div>

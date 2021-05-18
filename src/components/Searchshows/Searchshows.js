@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Searchshows.css";
-import Searcheditems from "../Searcheditems/Searcheditems";
+import Searcheditemslist from "../Searcheditems/Searcheditemslist";
 
 const Searchshows = () => {
     const [radioInput, setradioInput] = useState("");
@@ -106,7 +106,7 @@ const Searchshows = () => {
                 </div>
             </div>
             {showNotFound && !showContent ? <h1>{"Seacrhed Item Not Found"}</h1> : ""}
-            {!showNotFound && showContent ? <Searcheditems data={searchedData} type={radioInput} /> : ""}
+            {!showNotFound && showContent ? <Searcheditemslist data={searchedData} type={radioInput} /> : ""}
         </div>
     );
 };

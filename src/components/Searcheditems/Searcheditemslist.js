@@ -2,7 +2,7 @@ import React from "react";
 import Searcheditem from "./Searcheditem";
 import "../Items/Items.css";
 
-const Searcheditems = (props) => {
+const Searcheditemslist = (props) => {
     let data = props.data;
     let type = props.type;
     return (
@@ -18,4 +18,4 @@ const Searcheditems = (props) => {
         </div>
     );
 };
-export default Searcheditems;
+export default Searcheditemslist;
