@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tvquest/static/css/main.c01760d1.chunk.css",
-    "main.js": "/tvquest/static/js/main.35e8663f.chunk.js",
-    "main.js.map": "/tvquest/static/js/main.35e8663f.chunk.js.map",
+    "main.js": "/tvquest/static/js/main.4591179b.chunk.js",
+    "main.js.map": "/tvquest/static/js/main.4591179b.chunk.js.map",
     "runtime-main.js": "/tvquest/static/js/runtime-main.e4532fe5.js",
     "runtime-main.js.map": "/tvquest/static/js/runtime-main.e4532fe5.js.map",
     "static/css/2.c1f4f5f4.chunk.css": "/tvquest/static/css/2.c1f4f5f4.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.c1f4f5f4.chunk.css",
     "static/js/2.0c0168cf.chunk.js",
     "static/css/main.c01760d1.chunk.css",
-    "static/js/main.35e8663f.chunk.js"
+    "static/js/main.4591179b.chunk.js"
   ]
 }
