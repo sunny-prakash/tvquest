@@ -13,14 +13,14 @@ class Actordetails extends Component {
     componentWillMount() {
         // console.log(this.id);
         (async () => {
-            await fetch(`http://api.tvmaze.com/people/${this.id}`)
+            await fetch(`https://api.tvmaze.com/people/${this.id}`)
                 .then((resp) => resp.json())
                 .then((data) => {
                     this.setState({ actorDetail: data });
                 });
         })();
         (async () => {
-            await fetch(`http://api.tvmaze.com/people/${this.id}/castcredits?embed=show`)
+            await fetch(`https://api.tvmaze.com/people/${this.id}/castcredits?embed=show`)
                 .then((resp) => resp.json())
                 .then((data) => {
                     // console.log("actorhsows", data);

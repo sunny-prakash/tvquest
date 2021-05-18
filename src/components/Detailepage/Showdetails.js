@@ -12,7 +12,7 @@ class Showdetails extends Component {
     }
     componentWillMount() {
         (async () => {
-            await fetch(`http://api.tvmaze.com/shows/${this.id}?embed[]=seasons&embed[]=cast`)
+            await fetch(`https://api.tvmaze.com/shows/${this.id}?embed[]=seasons&embed[]=cast`)
                 .then((resp) => resp.json())
                 .then((data) => {
                     this.setState({ showDetail: data });

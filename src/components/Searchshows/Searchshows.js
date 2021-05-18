@@ -19,7 +19,7 @@ const Searchshows = () => {
         fetchData();
     };
     const fetchData = async () => {
-        await fetch(`http://api.tvmaze.com/search/${radioInput}?q=${searchInput}`)
+        await fetch(`https://api.tvmaze.com/search/${radioInput}?q=${searchInput}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -36,6 +36,7 @@ const Searchshows = () => {
             });
     };
     const radioInputSelect = (e) => {
+        e.preventDefault();
         setradioInput(e.target.value);
     };
     return (

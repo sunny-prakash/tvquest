@@ -19,7 +19,7 @@ class App extends Component {
 
     componentWillMount() {
         const fetchData = async () => {
-            await fetch("http://api.tvmaze.com/shows")
+            await fetch("https://api.tvmaze.com/shows")
                 .then((response) => response.json())
                 .then((data) => {
                     this.setState({ data });
