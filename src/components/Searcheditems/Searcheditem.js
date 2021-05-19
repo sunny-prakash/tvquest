@@ -13,7 +13,7 @@ const Searcheditem = (props) => {
                         <h5 className="card-title">{item.show.name}</h5>
                         <p className="card-text card_text">{Boolean(item.show.summary) ? item.show.summary.replaceAll(/(<([^>]+)>)/gi, "") : "NA"} </p>
                         <Link to={`shows/${item.show.id}`} className="btn btn-primary">
-                            {"Movie detail"}
+                            {"Show detail"}
                         </Link>
                     </div>
                 </div>

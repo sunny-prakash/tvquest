@@ -40,7 +40,7 @@ class Showdetails extends Component {
                                 </p>
                                 <p>{`Status : ${showDetail.status}`}</p>
                                 <p>{`Ratings : ${showDetail.rating.average}`}</p>
-                                <div>{showDetail.summary.replaceAll(/(<([^>]+)>)/gi, "")}</div>
+                                <div>{Boolean(showDetail.summary) ? showDetail.summary.replaceAll(/(<([^>]+)>)/gi, "") : "NA"}</div>
                             </div>
                         </div>
                         <div>
@@ -53,7 +53,7 @@ class Showdetails extends Component {
                                                 <img src={Boolean(season.image) ? season.image.medium : "https://cdn.pixabay.com/photo/2016/09/16/00/17/movie-1673024_960_720.jpg"} className="card_img" alt="card_img" />
                                                 <div className="card-body">
                                                     <h5 className="card-title fw6">{`Season : ${season.number}`}</h5>
-                                                    <p className="card-text fw6">{`Episodes : ${season.episodeOrder}`}</p>
+                                                    <p className="card-text fw6">{`Episodes : ${Boolean(season.episodeOrder) ? season.episodeOrder : "NA"}`}</p>
                                                 </div>
                                             </div>
                                         </div>
