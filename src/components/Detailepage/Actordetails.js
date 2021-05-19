@@ -40,7 +40,7 @@ class Actordetails extends Component {
                                 <img className="detail_img" src={Boolean(actorDetail.image) ? actorDetail.image.original : "https://cdn.pixabay.com/photo/2016/09/16/00/17/movie-1673024_960_720.jpg"} alt="show_img" />
                             </div>
                             <div className="mh5">
-                                <h1 className="fw7">{actorDetail.name}</h1>
+                                <h1 className="fw7">{Boolean(actorDetail.name) ? actorDetail.name : "NA"}</h1>
                                 <h4 className="fw6">{`Country : ${actorDetail.country.name}`}</h4>
                                 <p>{`Birthday : ${Boolean(actorDetail.birthday) ? actorDetail.birthday : "NA"}`}</p>
                                 <p>{`Gender : ${Boolean(actorDetail.gender) ? actorDetail.gender : "NA"}`}</p>
@@ -50,7 +50,7 @@ class Actordetails extends Component {
                 ) : (
                     <h1>{"Loading...."}</h1>
                 )}
-                {
+                {Boolean(actorDetail.name) ? (
                     <div className="black">
                         <h1 className="white fw7">{"Starred In :"}</h1>
                         <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 my-2">
@@ -69,7 +69,9 @@ class Actordetails extends Component {
                             })}
                         </div>
                     </div>
-                }
+                ) : (
+                    ""
+                )}
             </div>
         );
     }
