@@ -18,7 +18,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        let page = Math.floor(Math.random() * 200);
+        let page = Math.floor(Math.random() * 100);
         const fetchData = async () => {
             await fetch(`https://api.tvmaze.com/shows?page=${page}`)
                 .then((response) => response.json())
