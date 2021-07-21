@@ -17,7 +17,7 @@ class App extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const fetchData = async () => {
             await fetch(`https://api.tvmaze.com/shows`)
                 .then((response) => response.json())
